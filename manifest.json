@@ -5,7 +5,7 @@
   "permissions": ["tabs", "activeTab", "scripting"],
   "web_accessible_resources": [
     {
-      "resources": ["./bark.wav"],
+      "resources": ["./media/bark.wav"],
       "matches": ["<all_urls>"]
     }
   ],
