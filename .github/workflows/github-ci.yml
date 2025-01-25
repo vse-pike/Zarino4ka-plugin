@@ -19,8 +19,7 @@ jobs:
 
       - name: Archive plugin files
         run: |
-          mkdir -p dist
-          zip -r dist/zarino4ka-plugin.zip * -x ".github/*" "node_modules/*"
+          zip -r zarino4ka-plugin.zip * -x ".github/*" "node_modules/*" "media/*" "readme.md"
 
       - name: Create Release
         id: create_release
