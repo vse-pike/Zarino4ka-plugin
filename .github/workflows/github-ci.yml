@@ -39,6 +39,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/zarino4ka-plugin.zip
+          asset_path: ./zarino4ka-plugin.zip
           asset_name: zarino4ka-plugin.zip
           asset_content_type: application/zip
