@@ -4,60 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zarino4ka Plugin</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-            background-color: #f4f4f9;
-        }
-
-        .container {
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            padding: 20px 30px;
-            text-align: center;
-            width: 120px;
-        }
-
-        h3 {
-            color: #333;
-            font-size: 1.2em;
-            margin-bottom: 15px;
-        }
-
-        button {
-            padding: 10px 15px;
-            background-color: #276513;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            width: 100%;
-            margin-bottom: 10px;
-        }
-
-        button:hover {
-            background-color: #49974c;
-            transition: background-color 0.3s;
-        }
-    </style>
+    <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
-<div class="container">
-    <h3>Zarino4ka Plugin</h3>
-    <button id="remove-duplicates">Remove Duplicates</button>
-    <script src="remove-duplicates.js"></script>
-    <button id="sort-tabs">Sort Tabs</button>
-    <script src="sort-tabs.js"></script>
-    <button id="kek-tab">Kek</button>
-    <script src="kek.js"></script>
-</div>
+    <div class="container">
+        <header class="header-container">
+            <div class="user-container">
+                <div class="avatar-wrapper">
+                    <img src="style/profile.png" alt="Avatar" class="avatar">
+                </div>
+                <p class="name">Zarino4ka</p>
+            </div>
+            <button class="help-container" id="help">
+                <svg class="help-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+                    <path d="M18.0563 7.30211e-05C8.07195 -0.028052 -0.028052 8.07195 7.30211e-05 18.0563C0.028198 27.9282 8.26179 36.0001 18.1337 36.0001H36.0001V18.1337C36.0001 8.26179 27.9282 0.028198 18.0563 7.30211e-05ZM19.6032 27.1688C19.1321 27.5837 18.5485 27.7946 17.8454 27.7946C17.1423 27.7946 16.5587 27.5837 16.0876 27.1688C15.6165 26.754 15.3844 26.2196 15.3844 25.5727C15.3844 24.9259 15.6165 24.3915 16.0876 23.9766C16.5587 23.5618 17.1423 23.3509 17.8454 23.3509C18.5485 23.3509 19.1321 23.5618 19.6032 23.9766C20.0743 24.3915 20.3063 24.9259 20.3063 25.5727C20.3063 26.2196 20.0673 26.7469 19.6032 27.1688ZM23.7657 15.4055C23.4774 16.0032 23.0134 16.6149 22.3735 17.2337L20.8618 18.6399C20.4329 19.0548 20.1305 19.4766 19.9688 19.9126C19.8001 20.3485 19.7087 20.8969 19.6946 21.5649H15.9259C15.9259 20.2852 16.0735 19.2727 16.3618 18.5344C16.6571 17.7821 17.1423 17.1212 17.768 16.6079C18.4149 16.0665 18.9141 15.5673 19.2516 15.1173C19.5821 14.6884 19.7579 14.161 19.7579 13.6266C19.7579 12.3048 19.1884 11.6368 18.0493 11.6368C17.5571 11.6227 17.086 11.8337 16.7766 12.2134C16.4532 12.6001 16.2774 13.1204 16.2634 13.7813H11.8196C11.8407 12.0235 12.3891 10.6594 13.479 9.6821C14.5688 8.70476 16.0946 8.21257 18.0563 8.21257C20.011 8.21257 21.5298 8.66257 22.6055 9.5696C23.6813 10.4766 24.2157 11.7563 24.2157 13.4227C24.2087 14.1048 24.061 14.7868 23.7657 15.4055Z" />
+                </svg>
+            </button>
+        </header>
+        <hr class="dashed-line">
+        <div class="content-container">
+            <div class="buttons-container">
+                <button class="action-button" id="remove-duplicates">Почистить вкладки</button>
+                <button class="action-button" id="sort-tabs">Сортировка
+                    <span id="arrow">
+                    <svg class="arrow-icon" width="15" height="18" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.5 20V2M8.5 2L1 10.0676M8.5 2L16 10.0676" stroke="#512ECE" stroke-width="1.6"/>
+                    </svg>
+                </span>
+                </button>
+            </div>
+            <div class="info-block">
+                <p id="info" class="info-text text-container hidden">
+                    Данный плагин разработан для<br> любимой жопки Зарины Сергеевны<br>
+                    и не подлежит использованию другими<br> лицами. По вопросам разработки<br>
+                    плагинов обращаться: <a href="https://t.me/vsepike">@vsepike</a>
+                </p>
+            </div>
+        </div>
+        <div class="buttons-container">
+            <button class="kek-button" id="kek">Покекать</button>
+            <button class="action-button hidden" id="back">Назад</button>
+        </div>
+        <script src="kek.js" defer></script>
+        <script src="help-button.js" defer></script>
+        <script src="sort-tabs.js" defer></script>
+        <script src="remove-duplicates.js" defer></script>
+    </div>
 </body>
 </html>
