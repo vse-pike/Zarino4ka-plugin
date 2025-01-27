@@ -1,21 +1,17 @@
 .container {
-    width: 444px;
-    height: 326px;
+    width: 296px;
+    height: 217.3px;
     background-color: #FFFFFF;
-    /*border-radius: 28px;*/
     gap: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2.7px 5.3px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    padding: 28px;
+    padding: 18.7px;
     overflow: hidden;
-    clip-path: inset(0 round 28px);
+    clip-path: inset(0 round 18.7px);
 }
 
-/*
-  Header
-*/
-
+/* Header */
 .header-container {
     display: flex;
     justify-content: space-between;
@@ -24,14 +20,14 @@
 }
 
 .user-container {
-    gap: 20px;
+    gap: 13.3px;
     align-items: center;
     display: flex;
 }
 
 .avatar-wrapper {
-    width: 64px;
-    height: 64px;
+    width: 42.7px;
+    height: 42.7px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -50,10 +46,10 @@
 
 .name {
     font-family: "Stolzl", sans-serif;
-    font-size: 40px;
+    font-size: 26.7px;
     font-weight: bold;
     color: #181424;
-    line-height: 52px;
+    line-height: 34.7px;
     white-space: nowrap;
     margin: 0;
 }
@@ -68,8 +64,8 @@
 
 .help-icon {
     fill: #DFDEF0;
-    width: 36px;
-    height: 36px;
+    width: 24px;
+    height: 24px;
     transition: fill 0.3s ease;
 }
 
@@ -77,32 +73,24 @@
     fill: #512ECE;
 }
 
-/*
-< End >
-*/
-
-/*
-  Content
- */
-
-.content-container {
-}
+/* Content */
+.content-container {}
 
 .buttons-container {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
 }
 
 .action-button {
     background: #F6F5F9;
     border: none;
-    border-radius: 20px;
-    padding: 16px 10px;
-    gap: 10px;
+    border-radius: 13.3px;
+    padding: 10.7px 6.7px;
+    gap: 6.7px;
     color: #512ECE;
     font-family: "Stolzl", sans-serif;
-    font-size: 20px;
+    font-size: 13.3px;
 }
 
 .action-button:hover {
@@ -111,8 +99,8 @@
 
 .arrow-icon {
     fill: #512ECE;
-    width: 15px;
-    height: 18px;
+    width: 10px;
+    height: 12px;
 }
 
 .buttons-container {
@@ -122,13 +110,13 @@
 .kek-button {
     background: linear-gradient(to right, #512ECE, #18F0BD);
     border: none;
-    border-radius: 20px;
-    padding: 16px 10px;
-    gap: 10px;
+    border-radius: 13.3px;
+    padding: 10.7px 6.7px;
+    gap: 6.7px;
     color: #FFFFFF;
     font-family: "Stolzl", sans-serif;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 13.3px;
 }
 
 .kek-button:hover {
@@ -138,7 +126,7 @@
 .info-text {
     font-family: "Stolzl", sans-serif;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 13.3px;
     color: #181424;
     opacity: calc(80);
     line-height: 1.3em;
@@ -166,8 +154,8 @@
 
 .dashed-line {
     border: none;
-    border-top: 1px dashed #E6E5EA;
-    margin: 20px 0;
+    border-top: 0.67px dashed #E6E5EA;
+    margin: 13.3px 0;
 }
 
 @font-face {

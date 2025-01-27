@@ -58,13 +58,7 @@ function injectRainDogs() {
                     },
                     args: [dogImageSrc]
                 },
-                () => {
-                    if (chrome.runtime.lastError) {
-                        console.error("Ошибка инжектирования:", chrome.runtime.lastError.message);
-                    } else {
-                        console.log("rainDogs выполнен с изображением:", dogImageSrc);
-                    }
-                },
+                () => console.log("rainDogs выполнен с изображением:", dogImageSrc)
             );
         } else {
             console.error("Активная вкладка не найдена.");
@@ -73,8 +67,6 @@ function injectRainDogs() {
 }
 
 function barkingDog() {
-    console.log("Запуск barkingDog");
-
     const audioPath = chrome.runtime.getURL('media/bark.wav');
     const audio = new Audio(audioPath);
 
@@ -93,8 +85,6 @@ function injectBarkingDog() {
                 {
                     target: {tabId: tabs[0].id},
                     func: (dogImgs) => {
-                        console.log("Инъекция одной собачки");
-
                         const dog = document.createElement('img');
                         dog.src = dogImgs;
                         dog.style.position = 'fixed';
@@ -122,14 +112,20 @@ function random(actions) {
 }
 
 document.getElementById('kek').addEventListener('click', () => {
-    const actions = ["rainDogs", "barkingDog"];
 
-    const action = random(actions);
-    console.log(`Выбрано действие: ${action}`);
-    if (action === "rainDogs") {
-        injectRainDogs();
-    } else if (action === "barkingDog") {
-        barkingDog();
-        injectBarkingDog()
+    try {
+        const actions = ["rainDogs", "barkingDog"];
+
+        const action = random(actions);
+        console.log(`Выбрано действие: ${action}`);
+        if (action === "rainDogs") {
+            injectRainDogs();
+        } else if (action === "barkingDog") {
+            barkingDog();
+            injectBarkingDog()
+        }
+    } catch (err) {
+        console.error(err);
     }
+
 });
